@@ -12,6 +12,12 @@
                 <td>{{user[0]}}</td>
                 <td>{{user[1]}}</td>
                 <td>{{user[2]}}</td>
+                <td>
+                    <form action="/deregister", method="post">
+                        <input type="hidden" name="id" value="{{ user[0] }}">
+                        <input type="submit" value="Deregister">
+                    </form>
+                </td>
             </tr>
         {% endfor %} 
     </table>
